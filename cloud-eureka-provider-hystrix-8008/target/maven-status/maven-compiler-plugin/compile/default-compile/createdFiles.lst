@@ -1,0 +1,4 @@
+com\dily\springcloud\service\impl\PaymentServiceImpl.class
+com\dily\springcloud\service\PaymentService.class
+com\dily\springcloud\controller\PaymentController.class
+com\dily\springcloud\PaymentHystrixApplication.class

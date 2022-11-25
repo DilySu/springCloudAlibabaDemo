@@ -105,23 +105,23 @@
         <module>common</module>
         <module>cloud-eureka-7071</module>
         <module>cloud-eureka-7072</module>
-        <module>cloud-consumer-order-8081</module>
-        <module>cloud-consumer-order-8082</module>
-        <module>cloud-consumer-order-feign-8083</module>
-        <module>cloud-consumer-order-feign-hystrix-8084</module>
-        <module>cloud-provider-payment-8001</module>
-        <module>cloud-provider-payment-8002</module>
-        <module>cloud-provider-payment-8004</module>
-        <module>cloud-provider-payment-8006</module>
-        <module>cloud-provider-payment-hystrix-8008</module>
-        <module>cloud-consumer-hystrix-dashboard-9000</module>
+        <module>cloud-eureka-consumer-8081</module>
+        <module>cloud-eureka-consumer-8082</module>
+        <module>cloud-eureka-consumer-feign-8083</module>
+        <module>cloud-eureka-consumer-feign-hystrix-8084</module>
+        <module>cloud-eureka-provider-8001</module>
+        <module>cloud-eureka-provider-8002</module>
+        <module>cloud-zookeeper-provider-8004</module>
+        <module>cloud-consul-provider-8006</module>
+        <module>cloud-eureka-provider-hystrix-8008</module>
+        <module>cloud-eureka-stream-rabbitmq-consumer-8881</module>
+        <module>cloud-eureka-stream-rabbitmq-consumer-8882</module>
+        <module>cloud-eureka-stream-rabbitmq-provider-8880</module>
+        <module>cloud-hystrix-dashboard-9000</module>
         <module>cloud-gateway-api-9527</module>
-        <module>cloud-config-3344</module>
-        <module>cloud-config-client-3355</module>
-        <module>cloud-config-client-3366</module>
-        <module>cloud-stream-rabbitmq-consumer-8881</module>
-        <module>cloud-stream-rabbitmq-provider-8880</module>
-        <module>cloud-stream-rabbitmq-consumer-8882</module>
+        <module>cloud-eureka-config-3344</module>
+        <module>cloud-eureka-config-client-3355</module>
+        <module>cloud-eureka-config-client-3366</module>
         <module>cloud-alibaba-nacos-provider-9001</module>
         <module>cloud-alibaba-nacos-provider-9002</module>
         <module>cloud-alibaba-nacos-consumer-9999</module>

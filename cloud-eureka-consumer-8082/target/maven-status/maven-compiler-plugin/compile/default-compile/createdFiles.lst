@@ -1,0 +1,6 @@
+com\dily\balanced\config\MySelfRule.class
+com\dily\springcloud\OrderApplication02.class
+com\dily\springcloud\lb\MyLB.class
+com\dily\springcloud\lb\LoadBalancer.class
+com\dily\springcloud\config\AutoConfig.class
+com\dily\springcloud\controller\OrderController.class

@@ -1,0 +1,6 @@
+D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8082\src\main\java\com\dily\springcloud\lb\MyLB.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8082\src\main\java\com\dily\springcloud\lb\LoadBalancer.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8082\src\main\java\com\dily\springcloud\controller\OrderController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8082\src\main\java\com\dily\springcloud\config\AutoConfig.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8082\src\main\java\com\dily\springcloud\OrderApplication02.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8082\src\main\java\com\dily\balanced\config\MySelfRule.java

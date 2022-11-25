@@ -1,0 +1,33 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/sujinfengee/springcloud-config # github上面仓库名称
+          search-paths:
+            - springcloud-config
+          default-label: main
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
+
+# eureka
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:7071/eureka/,http://localhost:7072/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh' # 暴露bus 刷新配置端点

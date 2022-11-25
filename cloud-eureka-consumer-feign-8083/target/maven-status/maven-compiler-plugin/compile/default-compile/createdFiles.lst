@@ -1,0 +1,4 @@
+com\dily\springcloud\controller\OrderController.class
+com\dily\springcloud\config\FeignConfig.class
+com\dily\springcloud\feign\PaymentFeign.class
+com\dily\springcloud\OrderFeignApplication.class
