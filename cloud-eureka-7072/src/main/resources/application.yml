@@ -1,0 +1,23 @@
+server:
+  port: 7072
+spring:
+  application:
+    name: eureka
+
+eureka:
+  instance:
+    hostname: eureka
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+  server:
+    # 自我保护机制，默认开启
+    enable-self-preservation: true
+    # 自我抱回机制，驱逐时间
+    eviction-interval-timer-in-ms: 9000
+
+  client:
+    register-with-eureka: true # 不向服务中心注册自己
+    fetch-registry: false # 不从服务端拉取服务
+    service-url: # 注册地址
+      defaultZone: http://localhost:7071/eureka/

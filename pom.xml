@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.dily</groupId>
+    <artifactId>spring-cloud-alibaba-2022</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>parent</name>
+    <description>父工程管理文件</description>
+    <packaging>pom</packaging>
+
+    <!-- 仓库使用 阿里仓库-->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <!--    统一管理 Jar 包版本 -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <lombok.version>1.18.24</lombok.version>
+        <mysql.version>8.0.30</mysql.version>
+        <druid.version>1.2.13-SNSAPSHOT</druid.version>
+        <mybatis-plus.boot.version>3.5.2</mybatis-plus.boot.version>
+        <devtools.version>2.3.5.RELEASE</devtools.version>
+        <common.version>1.0-SNAPSHOT</common.version>
+        <hutool.version>5.8.9</hutool.version>
+    </properties>
+
+    <!-- 子模块继承后提供作用，锁定版本 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring boot 2.3.12 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.3.12.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring cloud Hoxton.SR12 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR12</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring cloud alibaba 2.2.9.RELEASE-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.9.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- mysql connect -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dily</groupId>
+                <artifactId>common</artifactId>
+                <version>${common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>${devtools.version}</version>
+            </dependency>
+            <!-- 工具包 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>common</module>
+        <module>cloud-eureka-7071</module>
+        <module>cloud-eureka-7072</module>
+        <module>cloud-consumer-order-8081</module>
+        <module>cloud-consumer-order-8082</module>
+        <module>cloud-consumer-order-feign-8083</module>
+        <module>cloud-consumer-order-feign-hystrix-8084</module>
+        <module>cloud-provider-payment-8001</module>
+        <module>cloud-provider-payment-8002</module>
+        <module>cloud-provider-payment-8004</module>
+        <module>cloud-provider-payment-8006</module>
+        <module>cloud-provider-payment-hystrix-8008</module>
+        <module>cloud-consumer-hystrix-dashboard-9000</module>
+        <module>cloud-gateway-api-9527</module>
+        <module>cloud-config-3344</module>
+        <module>cloud-config-client-3355</module>
+        <module>cloud-config-client-3366</module>
+        <module>cloud-stream-rabbitmq-consumer-8881</module>
+        <module>cloud-stream-rabbitmq-provider-8880</module>
+        <module>cloud-stream-rabbitmq-consumer-8882</module>
+        <module>cloud-alibaba-nacos-provider-9001</module>
+        <module>cloud-alibaba-nacos-provider-9002</module>
+        <module>cloud-alibaba-nacos-consumer-9999</module>
+        <module>cloud-alibaba-nacos-config-client-3377</module>
+        <module>cloud-alibaba-sentinel-service-8401</module>
+        <module>cloud-alibaba-sentinel-ribbon-consumer-8884</module>
+        <module>cloud-alibaba-sentinel-openfeign-consumer-8885</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

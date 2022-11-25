@@ -1,0 +1,42 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态获取服务名
+      routes:
+        # 使用ip地址进行转发
+        #        - id: payment_route1  # 路由的ID，没有固定规则，但是要求唯一，建议配合服务名称
+        #          uri: http://localhost:8001 # 匹配后提供服务的路由地址
+        #          predicates:
+        #            - Path=/payment/get/** # 断言，路径相匹配的进行路由
+        #        - id: payment_route2  # 路由的ID，没有固定规则，但是要求唯一，建议配合服务名称
+        #          uri: http://localhost:8001 # 匹配后提供服务的路由地址
+        #          predicates:
+        #            - Path=/payment/lb/** # 断言，路径相匹配的进行路由
+        # 使用服务名进行转发
+        - id: payment_route1  # 路由的ID，没有固定规则，但是要求唯一，建议配合服务名称
+          uri: lb://cloud-payment # 匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/get/** # 断言，路径相匹配的进行路由
+        - id: payment_route2  # 路由的ID，没有固定规则，但是要求唯一，建议配合服务名称
+          uri: lb://cloud-payment # 匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/lb/** # 断言，路径相匹配的进行路由
+            - After=2022-11-16T14:02:13.515870500+08:00[Asia/Shanghai]
+            - Cookie=username,zzkk # 含有Cookie，username=zzkk
+            - Header=X-Request-Id,\d+ # 请求头中含有 X-Request-Id，且值为整数
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    register-with-eureka: true # 向服务中心注册自己
+    fetch-registry: true # 从服务端拉取服务
+    service-url: # 注册地址
+      defaultZone: http://localhost:7071/eureka/,http://localhost:7072/eureka/
+

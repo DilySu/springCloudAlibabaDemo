@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  sentinel:
+    image: bladex/sentinel-dashboard:latest
+    container_name: sentinel
+    ports:
+      - "8858:8858"
+    networks:
+      - alibaba
+
+networks:
+  alibaba:
+    name: spring-cloud-alibaba

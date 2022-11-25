@@ -1,0 +1,33 @@
+server:
+  port: 3355
+spring:
+  application:
+    name: config-client
+  cloud:
+    config: # 从 main 分支上 config.dev.yml的配置文件读物
+      label: main   # 从配置中心 main 分支下
+      name: config  # 配置文件名称
+      profile: dev  # 配置文件环境，文件后缀名称
+      uri: http://localhost:3344
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
+
+
+# eureka 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:7071/eureka/,http://localhost:7072/eureka/
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
