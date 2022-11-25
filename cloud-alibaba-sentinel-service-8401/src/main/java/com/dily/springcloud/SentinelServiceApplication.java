@@ -10,7 +10,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * Author: Dily_Su
  * Remark:
  */
-@EnableDiscoveryClient
+@EnableDiscoveryClient // 注册中心
 @SpringBootApplication
 public class SentinelServiceApplication {
     public static void main(String[] args) {

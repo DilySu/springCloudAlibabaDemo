@@ -11,9 +11,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * Author: Dily_Su
  * Remark:
  */
-@EnableFeignClients
+@EnableFeignClients // 启用 feign 客户端
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableDiscoveryClient // 注册中心
 public class SentinelOpenFeignConsumer {
     public static void main(String[] args) {
         SpringApplication.run(SentinelOpenFeignConsumer.class, args);

@@ -14,7 +14,7 @@ import java.util.HashMap;
  * Date: 2022-11-22 星期二
  * Time: 15:31
  * Author: Dily_Su
- * Remark:
+ * Remark: 服务提供者测试接口
  */
 @RestController
 @RequestMapping("/payment")

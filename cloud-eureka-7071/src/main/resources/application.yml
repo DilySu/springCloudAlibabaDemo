@@ -8,8 +8,8 @@ spring:
 eureka:
   instance:
     hostname: eureka
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true # 使用ID地址注册服务
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # 服务实例名
 
   server:
     # 自我保护机制，默认开启

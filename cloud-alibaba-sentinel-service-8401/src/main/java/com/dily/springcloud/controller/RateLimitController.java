@@ -39,7 +39,6 @@ public class RateLimitController {
     }
 
     // 客户端统一处理 customerBlockHandler
-
     @GetMapping("/customerBlockHandler")
     @SentinelResource(value = "customerBlockHandler",
             blockHandlerClass = CustomerBlockHandler.class,

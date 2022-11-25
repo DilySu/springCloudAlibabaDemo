@@ -12,10 +12,12 @@
     <artifactId>cloud-gateway-api-9527</artifactId>
 
     <dependencies>
+        <!--    网关 gateway   -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
+        <!--    注册中心 eureka   -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

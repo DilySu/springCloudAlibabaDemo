@@ -28,11 +28,11 @@ public class OrderController {
 //    public static final String PAYMENT_URL = "http://cloud-payment";
 
     @Autowired
-    private LoadBalancer loadBalancer;
+    private LoadBalancer loadBalancer; // 自定义的负载均衡策略
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
-    private DiscoveryClient discoveryClient;
+    private DiscoveryClient discoveryClient; // 服务发现客户端，用于从注册中心获取服务信息
 
     @PostMapping("/create")
     public BaseResponse<?> create(@RequestBody Payment payment) {
@@ -63,16 +63,20 @@ public class OrderController {
      */
     @GetMapping("/lb")
     public String getLB() {
+        // 从注册中心获取 服务列表
         List<ServiceInstance> serviceInstances = discoveryClient.getInstances("cloud-payment");
         if (serviceInstances == null || serviceInstances.size() <= 0) {
             return null;
         }
-
+        // 使用自定义的负载均衡策略选择服务
         ServiceInstance instances = loadBalancer.instances(serviceInstances);
         URI uri = instances.getUri();
         return restTemplate.getForObject(uri + "/payment/lb", String.class);
     }
 
+    /**
+     * 分布式链路追踪测试
+     */
     @GetMapping("zipkin")
     public String zipkin() {
         return restTemplate.getForObject(PAYMENT_URL + "/payment/zipkin", String.class);

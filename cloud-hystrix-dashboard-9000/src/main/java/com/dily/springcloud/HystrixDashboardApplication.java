@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
  * Author: Dily_Su
  * Remark:
  */
-@EnableHystrixDashboard
+@EnableHystrixDashboard // 启动熔断器仪表盘
 @SpringBootApplication
 public class HystrixDashboardApplication {
     public static void main(String[] args) {

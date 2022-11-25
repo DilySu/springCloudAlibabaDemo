@@ -1,4 +1,4 @@
-package com.dily.springcloud;
+package springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,11 +11,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * Author: Dily_Su
  * Remark: 程序启动类
  */
-@EnableDiscoveryClient
-@EnableEurekaClient
+@EnableDiscoveryClient // 服务发现
+@EnableEurekaClient // 注册中心
 @SpringBootApplication
-public class PaymentApplication01 {
+public class EurekaProviderApplication02 {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentApplication01.class, args);
+        SpringApplication.run(EurekaProviderApplication02.class, args);
     }
 }

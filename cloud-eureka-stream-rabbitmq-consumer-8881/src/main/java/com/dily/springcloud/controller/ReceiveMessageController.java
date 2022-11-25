@@ -15,13 +15,13 @@ import org.springframework.stereotype.Component;
  * Remark:
  */
 @Component
-@EnableBinding(Sink.class)
+@EnableBinding(Sink.class)  // 消费者 sink
 @Slf4j
 public class ReceiveMessageController {
     @Value("${server.port}")
     private String port;
 
-    @StreamListener(Sink.INPUT)
+    @StreamListener(Sink.INPUT)   // 从消息队列消费 到系统，input 是对系统而言
     public void receiveMessage (Message<String> message){
 
         log.info("消费者1：----------> " + message.getPayload()+"\t port：" + port);

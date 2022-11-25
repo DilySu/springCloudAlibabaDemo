@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Remark: 将配置中心的配置通过接口返回
  */
 @RestController
-@RefreshScope
+@RefreshScope // 动态刷新配置必须
 public class ConfigController {
     @Value("${config.info}")
     private String configInfo;

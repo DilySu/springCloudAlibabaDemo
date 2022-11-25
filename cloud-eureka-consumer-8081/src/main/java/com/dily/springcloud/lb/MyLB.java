@@ -17,12 +17,18 @@ public class MyLB implements LoadBalancer {
 
     private AtomicInteger atomicInteger = new AtomicInteger(0);
 
+    /**
+     * 实现轮询策略
+     */
     @Override
     public ServiceInstance instances(List<ServiceInstance> serviceInstances) {
         return serviceInstances.get(getAndIncrement() % serviceInstances.size());
     }
 
 
+    /**
+     * 获取当前请求次数
+     */
     public final int getAndIncrement() {
         int current;
         int next;

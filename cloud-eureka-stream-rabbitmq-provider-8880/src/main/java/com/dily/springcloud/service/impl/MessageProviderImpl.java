@@ -20,7 +20,7 @@ import java.util.UUID;
 @Slf4j
 public class MessageProviderImpl implements MessageProvider {
 
-    @Resource // 信道
+    @Resource // 信道，与配置文件中信道名称一致
     private MessageChannel output;
 
     @Override

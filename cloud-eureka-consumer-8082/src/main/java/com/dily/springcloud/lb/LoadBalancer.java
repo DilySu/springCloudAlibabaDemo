@@ -8,7 +8,7 @@ import java.util.List;
  * Date: 2022-11-03 星期四
  * Time: 13:54
  * Author: Dily_Su
- * Remark:
+ * Remark: 自定义负载均衡策略顶层接口
  */
 public interface LoadBalancer {
 

@@ -12,10 +12,12 @@
     <artifactId>cloud-alibaba-nacos-config-client-3377</artifactId>
 
     <dependencies>
+        <!--    nacos 配置中心    -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+        <!--    nacos 注册中心客户端    -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>

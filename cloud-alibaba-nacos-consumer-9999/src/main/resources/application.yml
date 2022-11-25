@@ -6,8 +6,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: localhost:8848 # 注册中心地址
 
-# 消费者要去访问的微服务名称（注册成功进 nacos 的微服务提供者）
+# 消费者要去访问的微服务名称（注册成功进 nacos 的微服务提供者），这里可以忽略
 service-url:
   nacos-user-service: http://nacos-provider

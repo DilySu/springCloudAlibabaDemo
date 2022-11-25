@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * Date: 2022-11-24 星期四
  * Time: 17:20
  * Author: Dily_Su
- * Remark:
+ * Remark: 备用方案
  */
 @Component
 public class PaymentFallback implements PaymentFeign {

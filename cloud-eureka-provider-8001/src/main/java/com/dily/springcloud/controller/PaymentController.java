@@ -79,6 +79,9 @@ public class PaymentController {
         return serverPort;
     }
 
+    /**
+     * 用于 分布式链路
+     */
     @GetMapping("/zipkin")
     public String zipkin (){
         return "hi,i am payment zipkin server fall back, welcome to here.";

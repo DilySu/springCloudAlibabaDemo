@@ -11,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * Remark:
  */
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableDiscoveryClient // 注册中心
 public class SentinelRibbonConsumer {
     public static void main(String[] args) {
         SpringApplication.run(SentinelRibbonConsumer.class, args);

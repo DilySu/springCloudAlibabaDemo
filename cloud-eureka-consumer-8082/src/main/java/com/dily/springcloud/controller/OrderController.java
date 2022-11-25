@@ -28,7 +28,7 @@ public class OrderController {
     public static final String PAYMENT_URL = "http://cloud-payment";
 
     @Autowired
-    private LoadBalancer loadBalancer;
+    private LoadBalancer loadBalancer; // 自定义负载均衡策略
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
@@ -67,11 +67,13 @@ public class OrderController {
      */
     @GetMapping("/lb")
     public String getLB() {
+        // 从注册中心获取服务列表
         List<ServiceInstance> serviceInstances = discoveryClient.getInstances("cloud-payment");
         if (serviceInstances == null || serviceInstances.size() <= 0) {
             return null;
         }
 
+        // 根据自定义负载均衡策略获取服务
         ServiceInstance instances = loadBalancer.instances(serviceInstances);
         URI uri = instances.getUri();
         return restTemplate.getForObject(uri + "/payment/lb", String.class);

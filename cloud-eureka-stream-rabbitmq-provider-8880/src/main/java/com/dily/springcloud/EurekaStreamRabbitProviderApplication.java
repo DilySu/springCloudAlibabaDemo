@@ -10,10 +10,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * Author: Dily_Su
  * Remark:
  */
-@EnableEurekaClient
+@EnableEurekaClient // 注册中心
 @SpringBootApplication
-public class StreamProviderApplication {
+public class EurekaStreamRabbitProviderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(StreamProviderApplication.class, args);
+        SpringApplication.run(EurekaStreamRabbitProviderApplication.class, args);
     }
 }

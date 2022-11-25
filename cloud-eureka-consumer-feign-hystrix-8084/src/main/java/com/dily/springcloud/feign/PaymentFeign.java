@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Date: 2022-11-03 星期四
  * Time: 15:29
  * Author: Dily_Su
- * Remark:
+ * Remark: feign
  */
 @Component
 @FeignClient(value = "cloud-hystrix-payment", fallback = PaymentFallbackService.class)

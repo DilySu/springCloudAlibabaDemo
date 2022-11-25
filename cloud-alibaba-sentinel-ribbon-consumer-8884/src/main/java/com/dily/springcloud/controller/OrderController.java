@@ -16,7 +16,7 @@ import javax.annotation.Resource;
  * Date: 2022-11-24 星期四
  * Time: 15:28
  * Author: Dily_Su
- * Remark:
+ * Remark: 服务消费者
  */
 @RestController
 @RequestMapping("/order")

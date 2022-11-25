@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
  * Date: 2022-11-24 星期四
  * Time: 16:48
  * Author: Dily_Su
- * Remark:
+ * Remark: openfeign + sentinel
+ * 服务调用
  */
 @FeignClient(value = "nacos-provider",fallback = PaymentFallback.class)
 @Component

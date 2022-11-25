@@ -12,6 +12,7 @@
     <artifactId>cloud-alibaba-nacos-consumer-9999</artifactId>
 
     <dependencies>
+        <!--    nacos 注册中心客户端    -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>

@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
  * Date: 2022-11-24 星期四
  * Time: 16:47
  * Author: Dily_Su
- * Remark:
+ * Remark: 服务消费者
+ * openfeign + sentinel
  */
 @RestController
 @RequestMapping("/order")

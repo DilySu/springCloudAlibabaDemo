@@ -11,9 +11,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * Remark:
  */
 @SpringBootApplication
-@EnableConfigServer
-public class ConfigApplication {
+@EnableConfigServer // 注册中心服务端
+public class EurekaConfigApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigApplication.class, args);
+        SpringApplication.run(EurekaConfigApplication.class, args);
     }
 }

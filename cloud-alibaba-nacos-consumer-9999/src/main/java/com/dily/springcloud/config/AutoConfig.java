@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
  * Time: 16:01
  * Author: Dily_Su
  * Remark:
+ * nacos 中继承了 ribbon 所以支持负载均衡
  */
 @Configuration
 public class AutoConfig {

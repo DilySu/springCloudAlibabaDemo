@@ -10,7 +10,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * Author: Dily_Su
  * Remark:
  */
-@EnableDiscoveryClient
+@EnableDiscoveryClient // 启用注册中心客户端
 @SpringBootApplication
 public class NacosConfigApplication {
     public static void main(String[] args) {

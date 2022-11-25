@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
  * Date: 2022-11-24 星期四
  * Time: 15:33
  * Author: Dily_Su
- * Remark:
+ * Remark: 负载均衡
  */
 @Configuration
 public class AppConfig {

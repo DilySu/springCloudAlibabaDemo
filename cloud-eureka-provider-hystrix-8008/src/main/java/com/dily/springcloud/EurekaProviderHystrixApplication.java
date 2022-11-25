@@ -14,13 +14,13 @@ import org.springframework.context.annotation.Bean;
  * Author: Dily_Su
  * Remark:
  */
-@EnableEurekaClient
-@EnableCircuitBreaker
+@EnableEurekaClient  // 注册中心
+@EnableCircuitBreaker // 开启熔断器
 @SpringBootApplication
-public class PaymentHystrixApplication {
+public class EurekaProviderHystrixApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PaymentHystrixApplication.class, args);
+        SpringApplication.run(EurekaProviderHystrixApplication.class, args);
     }
 
     /**
