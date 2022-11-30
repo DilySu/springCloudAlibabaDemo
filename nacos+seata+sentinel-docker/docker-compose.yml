@@ -1,0 +1,68 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-alibaba
+    environment:
+      - MYSQL_ROOT_PASSWORD=root  # 数据库初始密码
+    volumes:
+      - ./data/mysql:/var/lib/mysql # 数据文件映射到外部
+    build:
+      dockerfile: ./image/mysql/Dockerfile  # 远程从git获取 sql 创建基础表
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    networks:
+      - alibaba
+
+  # nacos 持久化到 mysql 单例
+  nacos:
+    image: nacos/nacos-server
+    container_name: nacos-standalone-mysql
+    env_file:
+      - env/nacos/nacos-standlone-mysql.env # 数据库连接环境配置
+    volumes:
+      - ./data/nacos/logs/:/home/nacos/logs # nacos 日志映射
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9555:9555"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: always
+    networks:
+      - alibaba
+
+  # 熔断器
+  sentinel:
+    image: bladex/sentinel-dashboard:latest
+    container_name: sentinel
+    ports:
+      - "8858:8858"
+    networks:
+      - alibaba
+
+  # 分布式事务
+  seata:
+    image: seataio/seata-server:latest
+    container_name: seata-server
+    ports:
+      - "7091:7091"
+      - "8091:8091"
+    environment:
+#      - SEATA_IP=seata_ip
+      - SEATA_PORT=8091
+      - STORE_MODE=db
+    volumes:
+      - ./config/seata/application.yml:/seata-server/resources/application.yml # seata 配置
+    networks:
+      - alibaba
+
+networks:
+  alibaba:
+    name: spring-cloud-alibaba

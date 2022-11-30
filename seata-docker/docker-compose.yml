@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+
+  seata:
+    image: seataio/seata-server:latest
+    container_name: seata-server
+    ports:
+      - "7091:7091"
+      - "8091:8091"
+    environment:
+#      - SEATA_IP=seata_ip
+      - SEATA_PORT=8091
+      - STORE_MODE=db
+    volumes:
+      - ./config/application.yml:/seata-server/resources/application.yml
+    networks:
+      - alibaba
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql-seata
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=seata
+      - MYSQL_USER=seata
+      - MYSQL_PASSWORD=seata
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    networks:
+      - alibaba
+
+networks:
+  alibaba:
+    name: spring-cloud-alibaba

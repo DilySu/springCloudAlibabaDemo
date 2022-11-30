@@ -8,6 +8,8 @@ services:
     networks:
       - alibaba
 
+
+
 networks:
   alibaba:
     name: spring-cloud-alibaba
