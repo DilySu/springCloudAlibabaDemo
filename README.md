@@ -110,3 +110,7 @@ spring cloud alibaba 全套学习代码
 
 ### sentinel-docker
 > docker 中部署 sentinel 的 docker-compose
+### seata-docker
+> docker 中部署 seata 连接 mysql
+### nacos + seata + sentinel-docker
+> docker 中部署 nacos 作为 注册中心和配置中心，seata 进行注册和远程配置，sentinel 作为熔断，搭建分布式、高可用、事务管理、熔断器一体化
