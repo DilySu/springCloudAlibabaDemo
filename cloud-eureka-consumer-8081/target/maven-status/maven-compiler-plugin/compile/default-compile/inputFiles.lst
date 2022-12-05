@@ -1,6 +1,6 @@
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8081\src\main\java\com\dily\springcloud\config\AutoConfig.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8081\src\main\java\com\dily\springcloud\controller\OrderController.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8081\src\main\java\com\dily\springcloud\lb\MyLB.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8081\src\main\java\com\dily\springcloud\OrderApplication01.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8081\src\main\java\com\dily\banlanced\config\MySelfRule.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-8081\src\main\java\com\dily\springcloud\lb\LoadBalancer.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-8081\src\main\java\com\dily\springcloud\controller\OrderController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-8081\src\main\java\com\dily\springcloud\lb\LoadBalancer.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-8081\src\main\java\com\dily\banlanced\config\MySelfRule.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-8081\src\main\java\com\dily\springcloud\EurekaConsumerApplication01.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-8081\src\main\java\com\dily\springcloud\lb\MyLB.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-8081\src\main\java\com\dily\springcloud\config\AutoConfig.java

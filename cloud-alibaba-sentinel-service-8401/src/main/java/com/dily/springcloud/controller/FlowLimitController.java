@@ -2,8 +2,6 @@ package com.dily.springcloud.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.netflix.ribbon.proxy.annotation.Hystrix;
-import feign.Param;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 

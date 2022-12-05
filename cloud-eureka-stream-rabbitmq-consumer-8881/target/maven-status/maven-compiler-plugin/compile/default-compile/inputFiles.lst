@@ -1,2 +1,2 @@
-D:\program\myCode\springCloudAlibabaDemo\cloud-stream-rabbitmq-consumer-8881\src\main\java\com\dily\springcloud\StreamConsumerApplication01.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-stream-rabbitmq-consumer-8881\src\main\java\com\dily\springcloud\controller\ReceiveMessageController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-stream-rabbitmq-consumer-8881\src\main\java\com\dily\springcloud\controller\ReceiveMessageController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-stream-rabbitmq-consumer-8881\src\main\java\com\dily\springcloud\EurekaStreamRabbitConsumerApplication01.java

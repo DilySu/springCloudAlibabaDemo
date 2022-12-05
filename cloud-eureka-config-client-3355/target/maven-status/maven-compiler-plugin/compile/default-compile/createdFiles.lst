@@ -1,2 +1,2 @@
-com\dily\springcloud\ConfigClientApplication01.class
+com\dily\springcloud\EurekaConfigClientApplication01.class
 com\dily\springcloud\controller\ConfigController.class

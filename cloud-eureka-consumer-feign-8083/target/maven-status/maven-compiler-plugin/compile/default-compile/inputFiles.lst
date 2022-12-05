@@ -1,4 +1,4 @@
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-feign-8083\src\main\java\com\dily\springcloud\feign\PaymentFeign.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-feign-8083\src\main\java\com\dily\springcloud\controller\OrderController.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-feign-8083\src\main\java\com\dily\springcloud\config\FeignConfig.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-feign-8083\src\main\java\com\dily\springcloud\OrderFeignApplication.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-feign-8083\src\main\java\com\dily\springcloud\config\FeignConfig.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-feign-8083\src\main\java\com\dily\springcloud\EurekaConsumerFeignApplication.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-feign-8083\src\main\java\com\dily\springcloud\feign\PaymentFeign.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-feign-8083\src\main\java\com\dily\springcloud\controller\OrderController.java

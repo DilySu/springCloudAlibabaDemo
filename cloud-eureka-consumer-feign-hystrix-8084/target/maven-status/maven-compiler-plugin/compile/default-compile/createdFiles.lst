@@ -1,4 +1,4 @@
-com\dily\springcloud\OrderFeignHystrixApplication.class
 com\dily\springcloud\service\PaymentFallbackService.class
 com\dily\springcloud\controller\OrderController.class
+com\dily\springcloud\EurekaConsumerFeignHystrixApplication.class
 com\dily\springcloud\feign\PaymentFeign.class

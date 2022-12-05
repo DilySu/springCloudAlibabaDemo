@@ -1,4 +1,4 @@
+com\dily\springcloud\EurekaStreamRabbitProviderApplication.class
 com\dily\springcloud\service\impl\MessageProviderImpl.class
 com\dily\springcloud\service\MessageProvider.class
-com\dily\springcloud\StreamProviderApplication.class
 com\dily\springcloud\controller\MessageController.class

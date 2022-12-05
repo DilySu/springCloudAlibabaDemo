@@ -1,4 +1,4 @@
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-feign-hystrix-8084\src\main\java\com\dily\springcloud\service\PaymentFallbackService.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-feign-hystrix-8084\src\main\java\com\dily\springcloud\feign\PaymentFeign.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-feign-hystrix-8084\src\main\java\com\dily\springcloud\OrderFeignHystrixApplication.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-consumer-order-feign-hystrix-8084\src\main\java\com\dily\springcloud\controller\OrderController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-feign-hystrix-8084\src\main\java\com\dily\springcloud\controller\OrderController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-feign-hystrix-8084\src\main\java\com\dily\springcloud\service\PaymentFallbackService.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-feign-hystrix-8084\src\main\java\com\dily\springcloud\EurekaConsumerFeignHystrixApplication.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-consumer-feign-hystrix-8084\src\main\java\com\dily\springcloud\feign\PaymentFeign.java

@@ -1,5 +1,5 @@
 springcloud\mapper\PaymentMapper.class
 springcloud\service\impl\PaymentServiceImpl.class
+springcloud\ZookeeperProviderApplication04.class
 springcloud\controller\PaymentController.class
-springcloud\PaymentApplication04.class
 springcloud\service\PaymentService.class

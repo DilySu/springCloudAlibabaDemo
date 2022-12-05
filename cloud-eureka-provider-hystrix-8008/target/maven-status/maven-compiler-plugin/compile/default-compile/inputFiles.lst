@@ -1,4 +1,4 @@
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-hystrix-8008\src\main\java\com\dily\springcloud\service\PaymentService.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-hystrix-8008\src\main\java\com\dily\springcloud\controller\PaymentController.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-hystrix-8008\src\main\java\com\dily\springcloud\PaymentHystrixApplication.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-hystrix-8008\src\main\java\com\dily\springcloud\service\impl\PaymentServiceImpl.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-hystrix-8008\src\main\java\com\dily\springcloud\service\PaymentService.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-hystrix-8008\src\main\java\com\dily\springcloud\controller\PaymentController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-hystrix-8008\src\main\java\com\dily\springcloud\EurekaProviderHystrixApplication.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-hystrix-8008\src\main\java\com\dily\springcloud\service\impl\PaymentServiceImpl.java

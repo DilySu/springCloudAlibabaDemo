@@ -1,5 +1,5 @@
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8001\src\main\java\com\dily\springcloud\PaymentApplication01.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8001\src\main\java\com\dily\springcloud\controller\PaymentController.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8001\src\main\java\com\dily\springcloud\service\impl\PaymentServiceImpl.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8001\src\main\java\com\dily\springcloud\service\PaymentService.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8001\src\main\java\com\dily\springcloud\mapper\PaymentMapper.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-8001\src\main\java\com\dily\springcloud\service\impl\PaymentServiceImpl.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-8001\src\main\java\com\dily\springcloud\EurekaProviderApplication01.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-8001\src\main\java\com\dily\springcloud\controller\PaymentController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-8001\src\main\java\com\dily\springcloud\mapper\PaymentMapper.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-eureka-provider-8001\src\main\java\com\dily\springcloud\service\PaymentService.java

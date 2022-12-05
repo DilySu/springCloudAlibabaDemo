@@ -1,5 +1,5 @@
 springcloud\mapper\PaymentMapper.class
+springcloud\EurekaProviderApplication02.class
 springcloud\service\impl\PaymentServiceImpl.class
-springcloud\PaymentApplication02.class
 springcloud\controller\PaymentController.class
 springcloud\service\PaymentService.class

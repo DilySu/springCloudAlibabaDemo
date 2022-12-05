@@ -1,5 +1,5 @@
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8006\src\main\java\springcloud\PaymentApplication06.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8006\src\main\java\springcloud\mapper\PaymentMapper.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8006\src\main\java\springcloud\service\PaymentService.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8006\src\main\java\springcloud\service\impl\PaymentServiceImpl.java
-D:\program\myCode\springCloudAlibabaDemo\cloud-provider-payment-8006\src\main\java\springcloud\controller\PaymentController.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consul-provider-8006\src\main\java\springcloud\service\PaymentService.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consul-provider-8006\src\main\java\springcloud\service\impl\PaymentServiceImpl.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consul-provider-8006\src\main\java\springcloud\mapper\PaymentMapper.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consul-provider-8006\src\main\java\springcloud\ConsulProviderApplication06.java
+D:\program\myCode\springCloudAlibabaDemo\cloud-consul-provider-8006\src\main\java\springcloud\controller\PaymentController.java

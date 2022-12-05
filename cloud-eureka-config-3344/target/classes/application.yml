@@ -9,9 +9,9 @@ spring:
         git:
           uri: https://gitee.com/sujinfengee/springcloud-config # github上面仓库名称
           search-paths:
-            - springcloud-config
-          default-label: main
-  rabbitmq:
+            - springcloud-config # git 上文件路径
+          default-label: main # 默认分支
+  rabbitmq: # 使用消息总线进行定点同步、广播同步配置需要 rabbitmq
     host: localhost
     port: 5672
     username: user
@@ -20,10 +20,10 @@ spring:
 # eureka
 eureka:
   instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true # 使用IP注册服务
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # 实例ID
   client:
-    service-url:
+    service-url: # 注册中心地址
       defaultZone: http://localhost:7071/eureka/,http://localhost:7072/eureka/
 
 management:

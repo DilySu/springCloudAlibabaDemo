@@ -1,2 +1,2 @@
-com\dily\springcloud\StreamConsumerApplication01.class
 com\dily\springcloud\controller\ReceiveMessageController.class
+com\dily\springcloud\EurekaStreamRabbitConsumerApplication01.class

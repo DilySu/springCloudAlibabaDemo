@@ -53,6 +53,4 @@
             <artifactId>common</artifactId>
         </dependency>
     </dependencies>
-
-
 </project>

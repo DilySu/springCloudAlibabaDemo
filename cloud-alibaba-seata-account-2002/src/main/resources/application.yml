@@ -1,0 +1,71 @@
+server:
+  port: 2002
+spring:
+  application:
+    name: seata-account
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_account
+    username: root
+    password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # 注册中心地址
+        group: SEATA_GROUP
+        namespace: ced4abd2-5ad5-430a-9083-af0fda6b6c3d
+      config:
+        server-addr: localhost:8848 # 配置中心地址
+        group: SEATA_GROUP
+        namespace: ced4abd2-5ad5-430a-9083-af0fda6b6c3d
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  # Seata 事务组编号，用于 TC 集群名。该配置需要与服务端提到的group相对应，也需要与上面的相对应
+  tx-service-group: ${spring.application.name}-group
+  service:
+    disable-global-transaction: false
+    vgroup-mapping:
+      seata-account-group: default
+  # 关闭自动代理
+  enable-auto-data-source-proxy: true
+  data-source-proxy-mode: AT
+  client:
+    rm:
+      lock:
+        retry-interval: 10
+        retry-times: 30
+        retry-policy-branch-rollback-on-conflict: true
+    tm:
+      commit-retry-count: 5
+      rollback-retry-count: 5
+      default-global-transaction-timeout: 600000
+      degrade-check: false
+      degrade-check-period: 2000
+      degrade-check-allow-times: 10
+    undo:
+      log-serialization: jackson
+  #nacos配置中心配置
+  config:
+    type: nacos
+    nacos:
+      namespace: ced4abd2-5ad5-430a-9083-af0fda6b6c3d
+      server-addr: localhost:8848
+      group: SEATA_GROUP
+      data-id: seataServer.properties
+  #nacos注册中心配置
+  registry:
+    type: nacos
+    nacos:
+      application: ${spring.application.name}
+      group: SEATA_GROUP
+      namespace: ced4abd2-5ad5-430a-9083-af0fda6b6c3d
+      server-addr: localhost:8848
+  log:
+    exception-rate: 100
